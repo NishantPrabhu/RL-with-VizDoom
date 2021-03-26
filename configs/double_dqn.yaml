@@ -1,0 +1,25 @@
+
+# Configuration for DQN agent
+
+epochs: 5
+eval_every: 1
+train_steps_per_epoch: 2000
+val_steps_per_epoch: 50
+episodes_to_watch: 10
+
+game:
+  resolution: [30, 45]
+  config_file_path: "scenarios/simpler_basic.cfg"
+
+agent:
+  gamma: 0.99
+  frame_repeat: 12
+  batch_size: 64
+  epsilon: 1.0
+  eps_min: 0.1
+  eps_decay_rate: 0.999
+  optim_lr: 1.e-04
+  replay_memory_size: 10000
+  resolution: [30, 45]
+  
+  

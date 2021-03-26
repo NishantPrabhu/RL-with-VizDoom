@@ -1,0 +1,5 @@
+__pycache__/
+_vizdoom/
+wandb/
+outputs/
+_vizdoom.ini
