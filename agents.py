@@ -144,8 +144,8 @@ class DuelDQNAgent:
             device = self.device)
 
         # Model, optimizer, loss functions
-        self.model = networks.DQN(action_size).to(self.device)
-        self.target_model = networks.DQN(action_size).to(self.device).eval()
+        self.model = networks.DuelDQN(action_size).to(self.device)
+        self.target_model = networks.DuelDQN(action_size).to(self.device).eval()
         self.optim = optim.SGD(self.model.parameters(), lr=self.config['optim_lr'], momentum=0.9)
         self.criterion = nn.MSELoss()
 
